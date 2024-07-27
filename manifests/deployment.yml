@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: vatsalvashipipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vatsalvashipipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: vatsalvashipipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: vatsalvashipipelinesjavascriptdocker 
+          image: vatsalregistry.azurecr.io/vatsalvashipipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
